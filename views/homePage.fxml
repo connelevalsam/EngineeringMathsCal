@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="600.0" prefWidth="750.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.controller.Controller">
+  <children>
+    <MenuBar fx:id="menuBar" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File" fx:id="menuFile">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="parameters" fx:id="menuParam" />
+        <Menu mnemonicParsing="false" text="Diagrams" fx:id="menuImage" />
+        <Menu mnemonicParsing="false" text="Help" fx:id="menuHelp">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#aboutMenu" text="App" fx:id="mItemApp" />
+            <MenuItem mnemonicParsing="false" onAction="#tipsMenu" text="Notations" fx:id="mItemTips" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+        <TabPane layoutX="0.0" layoutY="0.0" prefHeight="576.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE">
+          <tabs>
+            <Tab text="Untitled">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                    <AnchorPane id="Content" fx:id="anchorFile" layoutX="0.0" layoutY="0.0" minHeight="0.0" minWidth="0.0" prefHeight="540.0" prefWidth="750.0" />
+                    <AnchorPane id="Content" fx:id="anchorParams" layoutX="0.0" layoutY="0.0" minHeight="0.0" minWidth="0.0" prefHeight="540.0" prefWidth="750.0" />
+                    <AnchorPane id="Content" fx:id="anchorHelp" layoutX="0.0" layoutY="0.0" minHeight="0.0" minWidth="0.0" prefHeight="540.0" prefWidth="750.0">
+                      <children>
+                        <Pane fx:id="paneNotation" layoutX="0.0" layoutY="0.0" prefHeight="540.0" prefWidth="680.0">
+                          <children>
+                            <TextArea layoutX="14.0" layoutY="7.0" prefHeight="519.0" prefWidth="652.0" text="AE   - Exhaust Conduct Area&#10;Cp   - Specific Heat Coefficient at Constant Pressure&#10;CW  - Compressor Work&#10;LHV  - Feul Low Heat Value" wrapText="true" />
+                          </children>
+                        </Pane>
+                        <Pane fx:id="paneAbout" layoutX="0.0" layoutY="0.0" prefHeight="540.0" prefWidth="680.0">
+                          <children>
+                            <TextArea layoutX="14.0" layoutY="11.0" prefHeight="519.0" prefWidth="652.0" text="The app is meant to solve the bla bla bla of engineering&#10;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis neque at lorem vulputate viverra at eu odio. Fusce placerat iaculis faucibus. Sed sit amet massa vel orci accumsan elementum et in nibh. In scelerisque nec augue at finibus. Sed at neque vitae risus commodo dignissim sit amet a eros. Proin ultricies est neque, et feugiat nibh varius a. Proin enim nunc, porttitor eget lorem quis, posuere auctor justo. In maximus massa lectus, eu tristique magna eleifend ut. Integer maximus elit nec turpis varius auctor.&#10;" wrapText="true" />
+                          </children>
+                        </Pane>
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane id="Content" fx:id="anchorImage" layoutX="0.0" layoutY="0.0" minHeight="0.0" minWidth="0.0" prefHeight="540.0" prefWidth="750.0">
+                      <children>
+                        <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" layoutX="0.0" layoutY="1.0" prefHeight="540.0" prefWidth="750.0">
+                          <content>
+                            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="525.0" prefWidth="759.0">
+                              <children>
+                                <TilePane fx:id="tileView" hgap="15.0" layoutX="5.0" layoutY="0.0" prefHeight="525.0" prefWidth="750.0">
+                                  <children>
+                                    <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                                  </children>
+                                  <padding>
+                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                  </padding>
+                                </TilePane>
+                              </children>
+                            </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                      </children>
+                    </AnchorPane>
+                  </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+          </tabs>
+        </TabPane>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
